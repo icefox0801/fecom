@@ -1,0 +1,27 @@
+INITIALIZE_COMPONENT:
+  en_US: initialize component
+  zh_CN: 初始化组件
+
+INITIALIZING_COMPONENT:
+  en_US: Initializing component...
+  zh_CN: 正在初始化组件...
+
+FINISH_INITIALIZING_COMPONENT:
+  en_US: Finish initializing component
+  zh_CN: 完成初始化组件
+
+CONFIGURING_COMPONENT_JSON:
+  en_US: Configuring "component.json"...
+  zh_CN: 正在配置"component.json"...
+
+FINISH_CONFIGURING_COMPONENT_JSON:
+  en_US: Finish configuring "component.json"
+  zh_CN: 完成配置"component.json"
+
+CREATE_PACKAGE_JSON:
+  en_US: Create "package.json"
+  zh_CN: 自动生成"package.json"
+
+COMPONENT_JSON_NOT_FOUND:
+  en_US: component.json not found
+  zh_CN: component.json文件未找到
