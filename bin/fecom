@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var Liftoff = require('Liftoff');
+var cli = require('../lib/cli');
+
+var fecom = new Liftoff({
+  name: 'fecom',
+  processTitle: 'fecom',
+  moduleName: 'fecom'
+});
+
+fecom.launch({}, function (env) {
+  cli.run(env);
+});
