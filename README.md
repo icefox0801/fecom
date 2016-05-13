@@ -2,8 +2,9 @@
 A magic component management tool
 
 ## Usage
-  Usage: fecom [options]
-
+  Usage: 
+  
+    fecom [options]
 
   Commands:
 
