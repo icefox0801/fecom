@@ -10,5 +10,5 @@ var fecom = new Liftoff({
 });
 
 fecom.launch({}, function (env) {
-  cli.run(env);
+  cli.start(env);
 });

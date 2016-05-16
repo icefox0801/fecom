@@ -18,6 +18,10 @@ FINISH_CONFIGURING_COMPONENT_JSON:
   en_US: Finish configuring "component.json"
   zh_CN: 完成配置"component.json"
 
+CREATE_COMPONENT_JSON:
+  en_US: Create "component.json"
+  zh_CN: 自动生成"component.json"
+
 CREATE_PACKAGE_JSON:
   en_US: Create "package.json"
   zh_CN: 自动生成"package.json"
@@ -25,3 +29,11 @@ CREATE_PACKAGE_JSON:
 COMPONENT_JSON_NOT_FOUND:
   en_US: component.json not found
   zh_CN: component.json文件未找到
+
+USER_PROFILE_NOT_FOUND:
+  en_US: User profile not found, initializing "~/.fecomrc"
+  zh_CN: 用户配置文件未找到，初始化"~/.fecomrc"
+
+FINISH_INITIALIZE_USER_PROFILE:
+  en_US: Finish initializing user profile
+  zh_CN: 完成初始化用户配置文件
