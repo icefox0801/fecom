@@ -1,0 +1,15 @@
+{
+  "name": "comp_deps",
+  "version": "1.0.0",
+  "description": "A magic component",
+  "main": "index.js",
+  "author": "icefox0801<icefox0801@hotmail.com>",
+  "dependencies": [],
+  "devDependencies": [],
+  "exclude": [
+    "docs",
+    "examples",
+    "test",
+    "README.md"
+  ]
+}
