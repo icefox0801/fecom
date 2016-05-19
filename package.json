@@ -45,7 +45,6 @@
     "yamljs": "^0.2.7"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "jasmine": "^2.4.1"
   }
 }

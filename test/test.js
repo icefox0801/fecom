@@ -3,6 +3,7 @@
 var path = require('path');
 
 var Jasmine = require('jasmine');
+var AdmZip = require('adm-zip');
 
 var fecom = require('../lib/fecom');
 var bootstrap = require('../lib/bootstrap');
@@ -21,6 +22,8 @@ jasmine.loadConfig({
 });
 
 fecom.on('ready', function () {
+  var zip = new AdmZip(path.join(__dirname, 'mock.zip'));
+  zip.extractAllTo(path.join(__dirname, 'mock'), true);
   gitlabRepo.initialize();
   jasmine.execute();
 });

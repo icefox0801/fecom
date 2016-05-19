@@ -37,3 +37,6 @@ node_modules
 
 # Temporary directory
 .tmp
+
+# Mock directory
+test/mock
