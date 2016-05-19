@@ -16,7 +16,7 @@ jasmine.loadConfig({
     "lib/*.spec.js",
     "lib/component/*.spec.js",
     "lib/util/*.spec.js",
-    "!lib/remote/*.spec.js"
+    "lib/remote/*.spec.js"
   ]
 });
 
@@ -33,5 +33,5 @@ bootstrap({
   token: '4zWuy_my-jMuSnjLSkKv'
 }, {
   owner: 'icefox0801',
-  domain: 'http://gitlab.com'
+  domain: 'https://gitlab.com'
 });
