@@ -37,3 +37,39 @@ USER_PROFILE_NOT_FOUND:
 FINISH_INITIALIZE_USER_PROFILE:
   en_US: Finish initializing user profile
   zh_CN: 完成初始化用户配置文件
+
+INSTALLING_COMPONENTS:
+  en_US: Installing component(s)...
+  zh_CN: 正在安装组件...
+
+NO_COMPONENT_INSTALLED:
+  en_US: No component was installed
+  zh_CN: 没有组件被安装
+
+FAIL_TO_INSTALL_COMPONENTS:
+  en_US: Fail to install components {0}
+  zh_CN: 组件 {0} 安装失败
+
+FINISH_INSTALLING_COMPONENT:
+  en_US: Finishing installing component
+  zh_CN: 完成安装组件
+
+BEGIN_TO_ANALYZE_DEPENDENCIES:
+  en_US: Begin to analyze dependencies
+  zh_CN: 开始分析组件依赖关系
+
+FINISH_ANALYZING_DEPENDENCIES:
+  en_US: Finish analyzing dependencies
+  zh_CN: 完成分析组件依赖关系
+
+ANALYZING:
+  en_US: Analyzing...
+  zh_CN: 分析中...
+
+DEPENDENCIES_TREE:
+  en_US: Dependencies tree
+  zh_CN: 依赖树
+
+READING_EXTRACTED_FILE_ERROR:
+  en_US: Error occurred in reading extracted files
+  zh_CN: 读取压缩文件时出错

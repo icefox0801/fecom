@@ -5,8 +5,6 @@ var getInstalled = require('../../../lib/component/getInstalled');
 var getToInstall = require('../../../lib/component/getToInstall');
 var analyze = require('../../../lib/component/analyze');
 
-fdescribe('aaa');
-
 describe('component analyze', function () {
   var parsedList = fecom.parse(['comp_sub_b@1.0.0']);
   it('should return the dependencies tree', function (done) {

@@ -49,16 +49,44 @@ describe('remote gitlab', function () {
   describe('getComponentJson', function () {});
   describe('getDependencies', function () {
     describe('icefox0801/comp_deps', function () {
-      fit('should return valid dependencies tree', function (done) {
+      it('should return valid dependencies tree', function (done) {
         gitlabRepo.getDependencies('icefox0801', 'comp_deps', '1.0.0')
           .then(function (tree) {
-            var expected = [
-              'icefox0801/comp_deps@1.0.0',
-              'icefox0801/comp_sub_a@1.0.1',
-              'icefox0801/comp_sub_a@1.1.0',
-              'icefox0801/comp_sub_b@1.0.1'
-            ];
-            expect(_.flattenDeep(tree).map(fecom.stringify).sort()).toEqual(expected);
+            var expectedTree = {
+              props: {
+                name: 'comp_deps',
+                owner: 'icefox0801',
+                version: '1.0.0'
+              },
+              subNodes: [
+                {
+                  props: {
+                    name: 'comp_sub_a',
+                    owner: 'icefox0801',
+                    version: '1.1.0'
+                  },
+                  subNodes: []
+                },
+                {
+                  props: {
+                    name: 'comp_sub_b',
+                    owner: 'icefox0801',
+                    version: '1.0.1'
+                  },
+                  subNodes: [
+                    {
+                      props: {
+                        name: 'comp_sub_a',
+                        owner: 'icefox0801',
+                        version: '1.0.1'
+                      },
+                      subNodes: []
+                    }
+                  ]
+                }
+              ]
+            };
+            expect(tree).toEqual(expectedTree);
             done();
           });
       });
