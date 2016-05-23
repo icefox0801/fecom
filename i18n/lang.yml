@@ -77,3 +77,7 @@ DEPENDENCIES_TREE:
 READING_EXTRACTED_FILE_ERROR:
   en_US: Error occurred in reading extracted files
   zh_CN: 读取压缩文件时出错
+
+CHECKING_UPDATE:
+  en_US: Checking update
+  zh_CN: 检查更新中
