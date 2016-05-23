@@ -8,8 +8,15 @@ var bootstrap = require('../../../lib/bootstrap');
 var gitlabRepo = require('../../../lib/remote/gitlab');
 
 describe('remote gitlab', function () {
+  var expectedNode = {
+    name: 'icefox0801/comp_deps@1.0.0',
+    dependencies: [
+      'icefox0801/comp_sub_a@1.1.0',
+      'icefox0801/comp_sub_b@1.0.1'
+    ]
+  };
   beforeAll(function () {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 200000;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
   });
   describe('validate', function () {
     describe('icefox0801/comp_valid_version@1.1.2', function () {
@@ -47,46 +54,12 @@ describe('remote gitlab', function () {
     });
   });
   describe('getComponentJson', function () {});
-  describe('getDependencies', function () {
+  fdescribe('getDependencies', function () {
     describe('icefox0801/comp_deps', function () {
       it('should return valid dependencies tree', function (done) {
         gitlabRepo.getDependencies('icefox0801', 'comp_deps', '1.0.0')
           .then(function (tree) {
-            var expectedTree = {
-              props: {
-                name: 'comp_deps',
-                owner: 'icefox0801',
-                version: '1.0.0'
-              },
-              subNodes: [
-                {
-                  props: {
-                    name: 'comp_sub_a',
-                    owner: 'icefox0801',
-                    version: '1.1.0'
-                  },
-                  subNodes: []
-                },
-                {
-                  props: {
-                    name: 'comp_sub_b',
-                    owner: 'icefox0801',
-                    version: '1.0.1'
-                  },
-                  subNodes: [
-                    {
-                      props: {
-                        name: 'comp_sub_a',
-                        owner: 'icefox0801',
-                        version: '1.0.1'
-                      },
-                      subNodes: []
-                    }
-                  ]
-                }
-              ]
-            };
-            expect(tree).toEqual(expectedTree);
+            expect(tree).toEqual(expectedNode);
             done();
           });
       });

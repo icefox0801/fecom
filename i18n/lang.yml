@@ -66,6 +66,10 @@ ANALYZING:
   en_US: Analyzing...
   zh_CN: 分析中...
 
+COMPONENT_ALREADY_INSTALLED:
+  en_US: Component {0} is already installed
+  zh_CN: 组件 {0} 已经被安装
+
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
   zh_CN: 依赖树
