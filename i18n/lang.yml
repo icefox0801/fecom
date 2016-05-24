@@ -46,6 +46,10 @@ NO_COMPONENT_INSTALLED:
   en_US: No component was installed
   zh_CN: 没有组件被安装
 
+INSTALLED_COMPONENTS:
+  en_US: "Installed component(s)\n{0}"
+  zh_CN: "安装的组件\n{0}"
+
 FAIL_TO_INSTALL_COMPONENTS:
   en_US: Fail to install components {0}
   zh_CN: 组件 {0} 安装失败
@@ -62,13 +66,17 @@ FINISH_ANALYZING_DEPENDENCIES:
   en_US: Finish analyzing dependencies
   zh_CN: 完成分析组件依赖关系
 
-ANALYZING:
-  en_US: Analyzing...
-  zh_CN: 分析中...
+ANALYZING_DEPENDENCIES:
+  en_US: Analyzing dependencies...
+  zh_CN: 正在分析组件依赖关系...
 
 COMPONENT_ALREADY_INSTALLED:
   en_US: Component {0} is already installed
   zh_CN: 组件 {0} 已经被安装
+
+COMPONENT_VERSION_CONFLICT:
+  en_US: Cmponent version conflict {0}
+  zh_CN: 组件版本冲突 {0}
 
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
@@ -81,3 +89,15 @@ READING_EXTRACTED_FILE_ERROR:
 CHECKING_UPDATE:
   en_US: Checking update
   zh_CN: 检查更新中
+
+NO_UPDATE_AVAILABLE:
+  en_US: No update available
+  zh_CN: 无可用更新
+
+BEGIN_TO_DOWNLOAD_COMPONENTS:
+  en_US: Begin to downloading component(s)
+  zh_CN: 开始下载组件
+
+DOWNLOADING_COMPONENT:
+  en_US: "[:bar] :percent :etas Downloading {0}"
+  zh_CN: "[:bar] :percent :etas 正在下载 {0}"
