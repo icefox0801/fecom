@@ -5,7 +5,7 @@ var getInstalled = require('../../../lib/component/getInstalled');
 var getToInstall = require('../../../lib/component/getToInstall');
 var analyze = require('../../../lib/component/analyze');
 
-fdescribe('component analyze', function () {
+describe('component analyze', function () {
   var parsedList = fecom.parse(['comp_sub_b@1.0.0']);
   beforeAll(function () {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;

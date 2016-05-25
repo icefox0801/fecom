@@ -53,8 +53,7 @@ describe('remote gitlab', function () {
       });
     });
   });
-  describe('getComponentJson', function () {});
-  fdescribe('getDependencies', function () {
+  describe('getRemoteDependencies', function () {
     describe('icefox0801/comp_deps', function () {
       it('should return valid dependencies tree', function (done) {
         gitlabRepo.getDependencies('icefox0801', 'comp_deps', '1.0.0')

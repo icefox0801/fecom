@@ -42,9 +42,9 @@ INSTALLING_COMPONENTS:
   en_US: Installing component(s)...
   zh_CN: 正在安装组件...
 
-NO_COMPONENT_INSTALLED:
-  en_US: No component was installed
-  zh_CN: 没有组件被安装
+NO_COMPONENT_TO_INSTALL:
+  en_US: No component to install
+  zh_CN: 没有要安装的组件
 
 INSTALLED_COMPONENTS:
   en_US: "Installed component(s)\n{0}"
