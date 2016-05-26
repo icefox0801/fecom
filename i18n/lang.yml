@@ -78,6 +78,14 @@ COMPONENT_VERSION_CONFLICT:
   en_US: Cmponent version conflict {0}
   zh_CN: 组件版本冲突 {0}
 
+INSTALLED:
+  en_US: Installed
+  zh_CN: 已经安装
+
+TO_INSTALL:
+  en_US: To install
+  zh_CN: 即将安装
+
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
   zh_CN: 依赖树
