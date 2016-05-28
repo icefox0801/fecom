@@ -38,6 +38,18 @@ FINISH_INITIALIZE_USER_PROFILE:
   en_US: Finish initializing user profile
   zh_CN: 完成初始化用户配置文件
 
+LIST_COMPONENT_VERSIONS:
+  en_US: list component versions
+  zh_CN: 列出组件版本
+
+COMPONENT_VERSIONS:
+  en_US: "Component versions\n{0}"
+  zh_CN: "组件版本\n{0}"
+
+INSTALL_COMPONENTS:
+  en_US: install component(s)
+  zh_US: 安装组件
+
 INSTALLING_COMPONENTS:
   en_US: Installing component(s)...
   zh_CN: 正在安装组件...
