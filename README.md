@@ -1,6 +1,13 @@
 # fecom
 A magic component management tool
 
+[![Build Status](https://travis-ci.org/icefox0801/fecom.svg?branch=master)](https://travis-ci.org/icefox0801/fecom)
+
+---
+## Install
+```sh
+npm install -g fecom
+```
 ## Usage
   Usage: 
   
