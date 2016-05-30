@@ -129,3 +129,7 @@ PRINT_COMPONENT_DEPENDENCIES_TREE:
 USER_PROFILE:
   en_US: "User profile\n{0}"
   zh_CN: "用户配置\n{0}"
+
+VERSIONING_COMPONENT:
+  en_US: versioning component
+  zh_CN: 组件版本更新
