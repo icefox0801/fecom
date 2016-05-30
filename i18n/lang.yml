@@ -133,3 +133,7 @@ USER_PROFILE:
 VERSIONING_COMPONENT:
   en_US: versioning component
   zh_CN: 组件版本更新
+
+CURRENT_VERSION:
+  en_US: "Current version: {0}"
+  zh_CN: "当前版本: {0}"
