@@ -48,7 +48,7 @@ COMPONENT_VERSIONS:
 
 INSTALL_COMPONENTS:
   en_US: install component(s)
-  zh_US: 安装组件
+  zh_CN: 安装组件
 
 INSTALLING_COMPONENTS:
   en_US: Installing component(s)...
@@ -121,3 +121,11 @@ BEGIN_TO_DOWNLOAD_COMPONENTS:
 DOWNLOADING_COMPONENT:
   en_US: "[:bar] :percent :etas Downloading {0}"
   zh_CN: "[:bar] :percent :etas 正在下载 {0}"
+
+PRINT_COMPONENT_DEPENDENCIES_TREE:
+  en_US: print component dependencies tree
+  zh_CN: 打印组件依赖树
+
+USER_PROFILE:
+  en_US: "User profile\n{0}"
+  zh_CN: "用户配置\n{0}"
