@@ -141,3 +141,7 @@ VERSIONING_COMPONENT:
 CURRENT_VERSION:
   en_US: "Current version: {0}"
   zh_CN: "当前版本: {0}"
+
+COMPONENT_OWNERS_CONFLICT:
+  en_US: Component owners conflict
+  zh_CN: 组件作者冲突
