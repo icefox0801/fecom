@@ -9,15 +9,18 @@ A magic component management tool
 npm install -g fecom
 ```
 ## Usage
-  Usage: 
   
-    fecom [options]
+  Usage: fecom [options]
+
 
   Commands:
 
-    init [options]            initialize component
-    install|i [component...]  install component(s)
-    list|ls [component...]    list component versions
+    init [options]                      初始化组件
+    install|i [options] [component...]  安装组件
+    list|ls [options] [component...]    列出组件版本
+    profile|p [options] [query]         列出组件版本
+    tree|t [options] [component...]     打印组件依赖树
+    version|v [options] [releaseType]   组件版本更新
 
   A magic component management tool
 
@@ -25,3 +28,4 @@ npm install -g fecom
 
     -h, --help     output usage information
     -V, --version  output the version number
+
