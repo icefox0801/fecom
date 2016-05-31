@@ -126,6 +126,10 @@ PRINT_COMPONENT_DEPENDENCIES_TREE:
   en_US: print component dependencies tree
   zh_CN: 打印组件依赖树
 
+MANAGE_USER_PROFILE:
+  en_US: manage user profile
+  zh_CN: 管理用户配置
+
 USER_PROFILE:
   en_US: "User profile\n{0}"
   zh_CN: "用户配置\n{0}"
