@@ -70,6 +70,10 @@ FINISH_INSTALLING_COMPONENT:
   en_US: Finishing installing component
   zh_CN: 完成安装组件
 
+INSTALL_COMPONENT_JSON_DEPENDENCIES:
+  en_US: Installing components specified as dependencies in component.json
+  zh_CN: 安装component.json中dependencies项指定的组件
+
 BEGIN_TO_ANALYZE_DEPENDENCIES:
   en_US: Begin to analyze dependencies
   zh_CN: 开始分析组件依赖关系
@@ -87,7 +91,7 @@ COMPONENT_ALREADY_INSTALLED:
   zh_CN: 组件 {0} 已经被安装
 
 COMPONENT_VERSION_CONFLICT:
-  en_US: Cmponent version conflict {0}
+  en_US: Component version conflict {0}
   zh_CN: 组件版本冲突 {0}
 
 INSTALLED:
@@ -97,6 +101,10 @@ INSTALLED:
 TO_INSTALL:
   en_US: To install
   zh_CN: 即将安装
+
+INSTALLED_STATUS:
+  en_US: installed
+  zh_CN: 已安装
 
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
