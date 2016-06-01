@@ -23,11 +23,18 @@ jasmine.loadConfig({
 });
 
 fecom.on('ready', function () {
-  var zip = new AdmZip(path.join(__dirname, 'mock.zip'));
-  zip.extractAllTo(path.join(__dirname, 'mock'), true);
   gitlabRepo.initialize();
   jasmine.execute();
 });
+
+var mockDir = path.join(__dirname, 'mock');
+
+if (fs.existsSync(mockDir)) {
+  fs.rmdirSync(path.join(__dirname, 'mock'));
+}
+
+var zip = new AdmZip(path.join(__dirname, 'mock.zip'));
+zip.extractAllTo(mockDir, true);
 
 bootstrap({
   cwd: path.join(__dirname, 'mock')
