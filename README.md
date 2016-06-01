@@ -2,6 +2,7 @@
 A magic component management tool
 
 [![Build Status](https://travis-ci.org/icefox0801/fecom.svg?branch=master)](https://travis-ci.org/icefox0801/fecom)
+[![Coverage Status](https://coveralls.io/repos/github/icefox0801/fecom/badge.svg?branch=master)](https://coveralls.io/github/icefox0801/fecom?branch=master)
 
 ---
 ## Install
