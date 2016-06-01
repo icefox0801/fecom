@@ -104,7 +104,7 @@ TO_INSTALL:
 
 INSTALLED_STATUS:
   en_US: installed
-  zh_CN: 已安装
+  zh_CN: 已经安装
 
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
