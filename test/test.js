@@ -2,6 +2,7 @@
 
 var path = require('path');
 
+var fs = require('graceful-fs');
 var Jasmine = require('jasmine');
 var AdmZip = require('adm-zip');
 

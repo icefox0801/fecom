@@ -2,7 +2,7 @@
 
 var getInstalled = require('../../../lib/component/getInstalled');
 
-describe('component getInstalled', function () {
+fdescribe('component getInstalled', function () {
   it('should get installed components', function (done) {
     getInstalled()
       .then(function (installed) {

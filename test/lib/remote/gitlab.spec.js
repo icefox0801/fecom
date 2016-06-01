@@ -1,13 +1,15 @@
 'use strict';
 
-var Promise = require('bluebird');
+var fs = require('graceful-fs');
 
 var _ = require('lodash');
+var Promise = require('bluebird');
+
 var fecom = require('../../../lib/fecom');
 var bootstrap = require('../../../lib/bootstrap');
 var gitlabRepo = require('../../../lib/remote/gitlab');
 
-describe('remote gitlab', function () {
+fdescribe('remote gitlab', function () {
   var expectedNode = {
     name: 'icefox0801/comp_deps@1.0.0',
     dependencies: [
@@ -17,6 +19,18 @@ describe('remote gitlab', function () {
   };
   beforeAll(function () {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
+  });
+  describe('getArchive', function () {
+    describe('icefox0801/comp_sub_a@1.1.0', function () {
+      it('should download valid archive', function (done) {
+        gitlabRepo.getArchive('icefox0801', 'comp_sub_a', '1.1.0')
+          .then(function (archivePath) {
+            var stats = fs.lstatSync(archivePath);
+            expect(stats.size).toEqual(3816);
+            done();
+          });
+      });
+    });
   });
   describe('validate', function () {
     describe('icefox0801/comp_valid_version@1.1.2', function () {
@@ -53,7 +67,7 @@ describe('remote gitlab', function () {
       });
     });
   });
-  describe('getRemoteDependencies', function () {
+  describe('getDependencies', function () {
     describe('icefox0801/comp_deps', function () {
       it('should return valid dependencies tree', function (done) {
         gitlabRepo.getDependencies('icefox0801', 'comp_deps', '1.0.0')
