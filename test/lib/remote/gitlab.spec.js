@@ -9,7 +9,7 @@ var fecom = require('../../../lib/fecom');
 var bootstrap = require('../../../lib/bootstrap');
 var gitlabRepo = require('../../../lib/remote/gitlab');
 
-describe('remote gitlab', function () {
+fdescribe('remote gitlab', function () {
   var expectedNode = {
     name: 'icefox0801/comp_deps@1.0.0',
     dependencies: [

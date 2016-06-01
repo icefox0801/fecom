@@ -3,6 +3,7 @@
 var path = require('path');
 
 var fs = require('graceful-fs');
+var fse = require('fs-extra');
 var Jasmine = require('jasmine');
 var AdmZip = require('adm-zip');
 
@@ -30,7 +31,7 @@ fecom.on('ready', function () {
 var mockDir = path.join(__dirname, 'mock');
 
 if (fs.existsSync(mockDir)) {
-  fs.rmdirSync(path.join(__dirname, 'mock'));
+  fse.removeSync(path.join(__dirname, 'mock'));
 }
 
 var zip = new AdmZip(path.join(__dirname, 'mock.zip'));

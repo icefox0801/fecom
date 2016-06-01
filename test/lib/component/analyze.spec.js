@@ -35,7 +35,7 @@ var expectedFilledTree = {
   ]
 };
 
-describe('component analyze', function () {
+fdescribe('component analyze', function () {
   var parsed = fecom.parse('comp_sub_c@1.0.2');
   beforeAll(function () {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
