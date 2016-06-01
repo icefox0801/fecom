@@ -5,7 +5,9 @@
   "bin": "bin/fecom",
   "main": "lib/fecom.js",
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node ./test/test.js",
+    "coverage": "istanbul cover --captureExceptions ./test/test.js",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -48,6 +50,8 @@
     "yamljs": "^0.2.7"
   },
   "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
     "jasmine": "^2.4.1"
   }
 }

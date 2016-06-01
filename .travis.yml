@@ -6,3 +6,6 @@ node_js:
   - "4.1"
   - "4.0"
   - "0.12"
+
+after_script:
+- "npm run coveralls"
