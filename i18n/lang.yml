@@ -1,3 +1,15 @@
+ENTER_USERNAME:
+  en_US: "Please enter your username:"
+  zh_CN: "请输入您的用户名:"
+
+ENTER_EMAIL:
+  en_US: "Please enter your email:"
+  zh_CN: "请输入您的邮箱:"
+
+ENTER_TOKEN:
+  en_US: "Please enter your Gitlab token:"
+  zh_CN: "请输入您的Gitlab token:"
+
 INITIALIZE_COMPONENT:
   en_US: initialize component
   zh_CN: 初始化组件
