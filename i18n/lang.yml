@@ -118,6 +118,14 @@ INSTALLED_STATUS:
   en_US: installed
   zh_CN: 已经安装
 
+MERGED_STATUS:
+  en_US: "Merged to: {0}"
+  zh_CN: "合并为: {0}"
+
+MERGE_CONFLICT_VERSIONS:
+  en_US: "Merge conflict versions ( {1} ) of component {0} to {2}"
+  zh_CN: "合并组件 {0} 冲突的版本 ( {1} ) 为 {2}"
+
 DEPENDENCIES_TREE:
   en_US: Dependencies tree
   zh_CN: 依赖树
@@ -165,3 +173,7 @@ CURRENT_VERSION:
 COMPONENT_OWNERS_CONFLICT:
   en_US: Component owners conflict
   zh_CN: 组件作者冲突
+
+UPDATE_COMPONENTS:
+  en_US: update component(s)
+  zh_CN: 更新组件
