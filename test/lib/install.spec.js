@@ -1,6 +1,6 @@
 'use strict';
 
-var reset = require('../reset');
+var reset = require('../helpers/reset');
 var fecom = require('../../lib/fecom');
 var install = require('../../lib/install');
 

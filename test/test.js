@@ -6,7 +6,7 @@ var fs = require('graceful-fs');
 var Jasmine = require('jasmine');
 
 var fecom = require('../lib/fecom');
-var reset = require('./reset');
+var reset = require('./helpers/reset');
 var bootstrap = require('../lib/bootstrap');
 var gitlabRepo = require('../lib/remote/gitlab');
 
