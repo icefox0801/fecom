@@ -1,6 +1,6 @@
 {
   "name": "fecom",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A magic component management tool",
   "bin": "bin/fecom",
   "main": "lib/fecom.js",
