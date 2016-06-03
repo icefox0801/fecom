@@ -1,9 +1,14 @@
 'use strict';
 
+var Promise = require('bluebird');
+
 var fecom = require('../../lib/fecom');
 var tree = require('../../lib/tree');
 
 fdescribe('tree', function () {
+  beforeAll(function () {
+    spyOn(fecom, 'errorHandler');
+  });
   describe('all installed components', function () {
     it('should return a valid tree', function (done) {
       var expectedTree = {
@@ -60,7 +65,7 @@ fdescribe('tree', function () {
           }
         ]
       };
-      tree([], { cwd: fecom.root })
+      tree([], {})
         .then(function (treeModel) {
           expect(treeModel.model).toEqual(expectedTree);
           done();
@@ -98,7 +103,7 @@ fdescribe('tree', function () {
           }
         ]
       };
-      tree(['comp_sub_b'], { cwd: fecom.root })
+      tree(['comp_sub_b'], {})
         .then(function (treeModel) {
           expect(treeModel.model).toEqual(expectedTree);
           done();
@@ -151,11 +156,17 @@ fdescribe('tree', function () {
           }
         ]
       };
-      tree(['comp_deps_new'], { cwd: fecom.root, remote: true })
+      tree(['comp_deps_new'], { remote: true })
         .then(function (treeModel) {
           expect(treeModel.model).toEqual(expectedTree);
           done();
         });
+    });
+  });
+
+  describe('remote no component', function () {
+    it('should throw an error', function () {
+      expect(tree).toThrowError();
     });
   });
 });
