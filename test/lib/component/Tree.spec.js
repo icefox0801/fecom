@@ -151,7 +151,7 @@ fdescribe('component Tree', function () {
       resolved: true
     },
     subNodes: []
-  }
+  };
   var expectedTreeAfterUpdate = {
     props: {
       name: 'comp_deps',
@@ -253,9 +253,9 @@ fdescribe('component Tree', function () {
         expect(treeModel.transform()).toEqual(expectedMap);
       });
     });
-    describe('getPathByNode', function () {
+    describe('findPathByNode', function () {
       it('should return valid paths', function () {
-        expect(treeModel.getPathByNode({
+        expect(treeModel.findPathByNode({
           name: 'comp_sub_a',
           owner: 'icefox0801'
         })).toEqual(expectedMatchedPaths);

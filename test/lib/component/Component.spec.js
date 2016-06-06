@@ -1,7 +1,10 @@
 'use strict';
 
+var fs = require('graceful-fs');
+
 var fecom = require('../../../lib/fecom');
 var Component = require('../../../lib/component/Component');
+var reset = require('../../helpers/reset');
 
 fdescribe('component constructor', function () {
 
@@ -24,14 +27,16 @@ fdescribe('component constructor', function () {
                 name: 'comp_deps',
                 owner: 'icefox0801',
                 version: '1.0.0',
-                specified: true
+                specified: true,
+                installed: true
               },
               subNodes: [
                 {
                   props: {
                     name: 'comp_sub_a',
                     owner: 'icefox0801',
-                    version: '1.1.0'
+                    version: '1.1.0',
+                    installed: true
                   },
                   subNodes: []
                 },
@@ -39,7 +44,8 @@ fdescribe('component constructor', function () {
                   props: {
                     name: 'comp_sub_b',
                     owner: 'icefox0801',
-                    version: '1.0.1'
+                    version: '1.0.1',
+                    installed: true
                   },
                   subNodes: [
                     {
@@ -47,7 +53,8 @@ fdescribe('component constructor', function () {
                         name: 'comp_sub_a',
                         owner: 'icefox0801',
                         version: '1.1.0',
-                        status: undefined
+                        status: undefined,
+                        installed: true
                       },
                       subNodes: []
                     }
@@ -60,7 +67,8 @@ fdescribe('component constructor', function () {
                 name: 'comp_valid_version',
                 version: '1.1.2',
                 owner: 'icefox0801',
-                specified: true
+                specified: true,
+                installed: true
               },
               subNodes: []
             }
@@ -81,7 +89,8 @@ fdescribe('component constructor', function () {
             name: 'comp_deps',
             owner: 'icefox0801',
             version: '1.0.0',
-            specified: true
+            specified: true,
+            installed: true
           }
         }];
         var component = new Component(null, 'root', { children: children });
@@ -97,14 +106,16 @@ fdescribe('component constructor', function () {
                 name: 'comp_deps',
                 owner: 'icefox0801',
                 version: '1.0.0',
-                specified: true
+                specified: true,
+                installed: true
               },
               subNodes: [
                 {
                   props: {
                     name: 'comp_sub_a',
                     owner: 'icefox0801',
-                    version: '1.1.0'
+                    version: '1.1.0',
+                    installed: true
                   },
                   subNodes: []
                 },
@@ -112,7 +123,8 @@ fdescribe('component constructor', function () {
                   props: {
                     name: 'comp_sub_b',
                     owner: 'icefox0801',
-                    version: '1.0.1'
+                    version: '1.0.1',
+                    installed: true
                   },
                   subNodes: [
                     {
@@ -120,7 +132,8 @@ fdescribe('component constructor', function () {
                         name: 'comp_sub_a',
                         owner: 'icefox0801',
                         version: '1.1.0',
-                        status: undefined
+                        status: undefined,
+                        installed: true
                       },
                       subNodes: []
                     }
@@ -133,6 +146,27 @@ fdescribe('component constructor', function () {
         component.getLocalDependenciesTree()
           .then(function (filledTree) {
             expect(filledTree).toEqual(expectedTree);
+            done();
+          });
+      });
+    });
+  });
+
+  describe('uninstall', function () {
+    describe('a component', function () {
+      it('should uninstall the valid component', function (done) {
+        var component = new Component({
+          name: 'comp_valid_version',
+          owner: 'icefox0801',
+          version: '1.1.2',
+          specified: true,
+          installed: true
+        });
+        component.uninstall()
+          .then(function (component) {
+            expect(fs.existsSync(component.fullpath)).toBeFalsy();
+            expect(component.installed).toBeFalsy();
+            reset();
             done();
           });
       });

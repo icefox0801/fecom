@@ -177,3 +177,31 @@ COMPONENT_OWNERS_CONFLICT:
 UPDATE_COMPONENTS:
   en_US: update component(s)
   zh_CN: 更新组件
+
+UNINSTALL_COMPONENTS:
+  en_US: uninstall component(s)
+  zh_CN: 卸载组件
+
+COMPONENT_NOT_INSTALLED:
+  en_US: Component {0} not installed
+  zh_CN: 组件 {0} 未安装
+
+OTHER_COMPONENT_DEPEND:
+  en_US: Can't uninstall {0}, Other component depends on it
+  zh_CN: 无法卸载 {0}，被其他组件依赖
+
+UNABLE_TO_UNINSTALL:
+  en_US: Unable to uninstall components
+  zh_CN: 无法卸载组件
+
+COMPONENT_DIR_NOT_EXISTS:
+  en_US: "Directory of component {0}  does not exists"
+  zh_CN: "组件 {0} 的目录不存在"
+
+NO_COMPONENT_TO_UNINSTALL:
+  en_US: No component to uninstall
+  zh_CN: 没有要卸载的组件
+
+UNINSTALLED_COMPONENTS:
+  en_US: "Uninstalled component(s)\n{0}"
+  zh_CN: "卸载的组件\n{0}"

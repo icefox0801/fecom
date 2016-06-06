@@ -23,14 +23,16 @@ fdescribe('tree', function () {
               name: 'comp_deps',
               owner: 'icefox0801',
               version: '1.0.0',
-              specified: true
+              specified: true,
+              installed: true
             },
             subNodes: [
               {
                 props: {
                   name: 'comp_sub_a',
                   owner: 'icefox0801',
-                  version: '1.1.0'
+                  version: '1.1.0',
+                  installed: true
                 },
                 subNodes: []
               },
@@ -38,7 +40,8 @@ fdescribe('tree', function () {
                 props: {
                   name: 'comp_sub_b',
                   owner: 'icefox0801',
-                  version: '1.0.1'
+                  version: '1.0.1',
+                  installed: true
                 },
                 subNodes: [
                   {
@@ -46,7 +49,8 @@ fdescribe('tree', function () {
                       name: 'comp_sub_a',
                       owner: 'icefox0801',
                       version: '1.1.0',
-                      status: undefined
+                      status: undefined,
+                      installed: true
                     },
                     subNodes: []
                   }
@@ -59,7 +63,8 @@ fdescribe('tree', function () {
               name: 'comp_valid_version',
               version: '1.1.2',
               owner: 'icefox0801',
-              specified: true
+              specified: true,
+              installed: true
             },
             subNodes: []
           }
@@ -87,7 +92,8 @@ fdescribe('tree', function () {
               name: 'comp_sub_b',
               owner: 'icefox0801',
               version: '1.0.1',
-              specified: true
+              specified: true,
+              installed: true
             },
             subNodes: [
               {
@@ -95,7 +101,8 @@ fdescribe('tree', function () {
                   name: 'comp_sub_a',
                   owner: 'icefox0801',
                   version: '1.1.0',
-                  status: undefined
+                  status: undefined,
+                  installed: true
                 },
                 subNodes: []
               }
