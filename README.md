@@ -97,4 +97,9 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 + `fecom version`: 提示选择并更新组件的版本号，会更新`component.json`中的`version`和自动添加`tag`，注意还需执行`git push --follow-tags`来推送到远程仓库
 + `fecom version patch`: 以`patch`类型更新组件版本号，类型也可以为`major`或者`minor`
 
-## 
+## 组件安装格式
+组件名称格式 `[source:][owner/]name[@version][?args]`，以`group/compA`为例
++ `fecom install compA`
++ `fecom install group/compA`
++ `fecom install group/compA@1.8.3`
++ `fecom install npm:group/compA@1.8.3（目前未实现，后续根据需要实现扩展npm包）`
