@@ -68,7 +68,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 + `dir`: 组件安装的目录，**仅适用于项目**
 + `author`: 组件作者信息
 + `main`: 入口文件，**仅适用于组件**
-+ `exclude`: 安装时排除的文件和目录，仅适用于组件，配置规则可以参考[node-glob]
++ `exclude`: 安装时排除的文件和目录，仅适用于组件，配置规则可以参考[node-glob](https://github.com/isaacs/node-glob)
 
 `fecom`的默认配置项：
 + `name`: 执行`fecom`命令的目录
