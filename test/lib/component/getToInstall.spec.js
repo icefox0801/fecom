@@ -2,7 +2,7 @@
 
 var getToInstall = require('../../../lib/component/getToInstall');
 
-fdescribe('component getToInstall', function () {
+describe('component getToInstall', function () {
   it('comp@1.0.0 should return components to install', function (done) {
     getToInstall([{
       owner: 'icefox0801',

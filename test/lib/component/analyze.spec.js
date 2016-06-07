@@ -7,7 +7,7 @@ var getInstalled = require('../../../lib/component/getInstalled');
 var getToInstall = require('../../../lib/component/getToInstall');
 var analyze = require('../../../lib/component/analyze');
 
-fdescribe('component analyze', function () {
+describe('component analyze', function () {
   beforeAll(function () {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
   });

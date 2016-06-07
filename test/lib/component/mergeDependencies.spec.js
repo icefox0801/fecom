@@ -2,7 +2,7 @@
 
 var mergeDependencies = require('../../../lib/component/mergeDependencies');
 
-fdescribe('component mergeDependencies', function () {
+describe('component mergeDependencies', function () {
   var newParsedList = [
     {
       name: 'comp_deps',

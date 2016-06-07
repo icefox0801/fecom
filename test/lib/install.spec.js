@@ -4,7 +4,7 @@ var reset = require('../helpers/reset');
 var fecom = require('../../lib/fecom');
 var install = require('../../lib/install');
 
-fdescribe('install', function () {
+describe('install', function () {
   describe('a component', function () {
     it('should install a valid component', function (done) {
       install(['comp_sub_d'], { cwd: fecom.root })

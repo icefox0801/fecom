@@ -6,7 +6,7 @@ var fecom = require('../../../lib/fecom');
 var Component = require('../../../lib/component/Component');
 var reset = require('../../helpers/reset');
 
-fdescribe('component constructor', function () {
+describe('component constructor', function () {
 
   beforeAll(function () {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;

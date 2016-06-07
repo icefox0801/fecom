@@ -3,7 +3,7 @@
 var fecom = require('../../lib/fecom');
 var list = require('../../lib/list');
 
-fdescribe('list', function () {
+describe('list', function () {
   describe('installed', function () {
     it('should return valid installed components', function (done) {
       var expectedInstalled = [

@@ -6,7 +6,7 @@ var reset = require('../helpers/reset');
 var fecom = require('../../lib/fecom');
 var update = require('../../lib/update');
 
-fdescribe('update', function () {
+describe('update', function () {
   describe('a component', function () {
     it('should update a valid component', function (done) {
       update(['comp_sub_a'], {})

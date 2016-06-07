@@ -5,7 +5,7 @@ var fecom = require('../../../lib/fecom');
 var Tree = require('../../../lib/component/Tree');
 var walkable = Tree.walkable;
 
-fdescribe('component Tree', function () {
+describe('component Tree', function () {
   var model = {
     props: {
       name: 'comp_deps',

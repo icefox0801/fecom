@@ -2,7 +2,7 @@
 
 var fecom = require('../../lib/fecom');
 
-fdescribe('fecom', function () {
+describe('fecom', function () {
   describe('parse', function () {
     describe('comp_valid_version', function () {
       it('should return the correctly parsed object', function () {

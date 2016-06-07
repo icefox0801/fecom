@@ -5,7 +5,7 @@ var Promise = require('bluebird');
 var fecom = require('../../lib/fecom');
 var tree = require('../../lib/tree');
 
-fdescribe('tree', function () {
+describe('tree', function () {
   beforeAll(function () {
     spyOn(fecom, 'errorHandler');
   });
