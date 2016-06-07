@@ -7,9 +7,12 @@ A magic component management tool
 ---
 ## 简介
 `fecom`是依托于[Gitlab](https://about.gitlab.com/)的组件管理工具，只需要满足下面条件，就可以通过`fecom`管理组件：
+
 + 对`fecom`进行正确配置
 + 组件中包含`component.json`配置文件
 + 组件中有与版本相对应的`tag`
+
+组件示例可以参考：[https://gitlab.com/u/icefox0801/projects](https://gitlab.com/u/icefox0801/projects)
 
 ## 安装
 ```sh
@@ -34,18 +37,19 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 ```
 
 ## 用法
-
   Usage: fecom [options]
 
 
   Commands:
 
-    init [options]                      初始化组件
-    install|i [options] [component...]  安装组件
-    list|ls [options] [component...]    列出组件版本
-    profile|p [options] [query]         管理用户配置
-    tree|t [options] [component...]     打印组件依赖树
-    version|v [options] [releaseType]   组件版本更新
+    init [options]                         初始化组件
+    install|i [options] [component...]     安装组件
+    uninstall|un [options] <component...>  卸载组件
+    list|ls [options] [component...]       列出组件版本
+    profile|p [options] [query]            管理用户配置
+    tree|t [options] [component...]        打印组件依赖树
+    version|v [options] [releaseType]      组件版本更新
+    update|u [component...]                更新组件
 
   A magic component management tool
 
@@ -53,7 +57,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 
     -h, --help     output usage information
     -V, --version  output the version number
-    
+
 ## component.json
 `component.json`配置文件可能存在于项目或者组件中，在不同的应用场景，并非所有的配置项都有用，请酌情进行配置！
 
