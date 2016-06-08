@@ -35,9 +35,6 @@ node_modules
 # WebStorm config
 .idea
 
-# Temporary directory
-.tmp
-
 # Mock directory
 test/mock
 test/tmp

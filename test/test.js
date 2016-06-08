@@ -2,8 +2,10 @@
 
 var path = require('path');
 
-var fs = require('graceful-fs');
 var Jasmine = require('jasmine');
+var profile = require('./helpers/profile');
+
+profile();
 
 var fecom = require('../lib/fecom');
 var reset = require('./helpers/reset');
@@ -28,11 +30,4 @@ reset();
 
 bootstrap({
   cwd: path.join(__dirname, 'mock')
-}, {
-  username: 'icefox0801',
-  email: 'icefox0801@hotmail.com',
-  token: '4zWuy_my-jMuSnjLSkKv'
-}, {
-  owner: 'icefox0801',
-  domain: 'https://gitlab.com'
 });
