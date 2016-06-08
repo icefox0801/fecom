@@ -58,6 +58,45 @@ describe('component analyze', function () {
           });
       });
     });
+    describe('component installed', function () {
+      it('should return the dependencies tree', function (done) {
+        var parsed = fecom.parse('comp_sub_a@1.1.0');
+        var expectedFilledTree = {
+          props: {
+            name: 'fecom-demo',
+            owner: 'icefox0801',
+            version: '1.0.0'
+          },
+          subNodes: [
+            {
+              props: {
+                name: 'comp_sub_a',
+                owner: 'icefox0801',
+                version: '1.1.0',
+                installed: true,
+                status: fecom.i18n('INSTALLED_STATUS'),
+                specified: true
+              },
+              subNodes: []
+            }
+          ]
+        };
+        Promise
+          .props({
+            installed: getInstalled(),
+            toInstall: getToInstall([parsed])
+          })
+          .then(function (results) {
+            var installed = results.installed;
+            var toInstall = results.toInstall;
+            return analyze(toInstall, installed);
+          })
+          .then(function (treeModel) {
+            expect(treeModel.model).toEqual(expectedFilledTree);
+            done();
+          });
+      });
+    });
   });
   describe('by latest strategy', function () {
     describe('component not installed', function () {
