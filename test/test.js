@@ -5,7 +5,7 @@ var path = require('path');
 var Jasmine = require('jasmine');
 var profile = require('./helpers/profile');
 
-profile();
+profile.init();
 
 var fecom = require('../lib/fecom');
 var reset = require('./helpers/reset');

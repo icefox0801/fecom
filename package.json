@@ -52,7 +52,7 @@
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
     "jasmine": "^2.4.1",
-    "node-expect": "^0.1.0",
-    "suppose": "^0.5.2"
+    "mock-stdin": "^0.3.0",
+    "node-expect": "^0.1.0"
   }
 }

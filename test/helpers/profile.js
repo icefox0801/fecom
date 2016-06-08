@@ -5,20 +5,22 @@ var path = require('path');
 var fs = require('graceful-fs');
 var ini = require('ini');
 
+var helper = {};
+
 function getUserHome() {
   return process.env[('win32' === process.platform) ? 'USERPROFILE' : 'HOME'];
 }
 
-module.exports = function () {
+helper.profileFile = path.join(getUserHome(), '.fecomrc');
+helper.profileFileTmp = path.join(getUserHome(), '.fecomrc_tmp');
+helper.init = function () {
 
-  var profileFile = path.join(getUserHome(), '.fecomrc');
-  var profileFileTmp = path.join(getUserHome(), '.fecomrc_tmp');
 
-  if (fs.existsSync(profileFile)) {
-    fs.renameSync(profileFile, profileFileTmp);
+  if (fs.existsSync(helper.profileFile)) {
+    fs.renameSync(helper.profileFile, helper.profileFileTmp);
   }
 
-  var profile = {
+  helper.profile = {
     username: 'icefox0801',
     email: 'icefox0801@hotmail.com',
     token: '4zWuy_my-jMuSnjLSkKv',
@@ -28,9 +30,19 @@ module.exports = function () {
     }
   };
 
-  fs.writeFileSync(profileFile, ini.stringify(profile));
+  fs.writeFileSync(helper.profileFile, ini.stringify(helper.profile));
 
   process.on('exit', function () {
-    fs.renameSync(profileFileTmp, profileFile);
+
+    if (fs.existsSync(helper.profileFileTmp)) {
+      fs.renameSync(helper.profileFileTmp, helper.profileFile);
+    }
+
   });
 };
+
+helper.reset = function () {
+  fs.writeFileSync(helper.profileFile, ini.stringify(helper.profile));
+};
+
+module.exports = helper;
