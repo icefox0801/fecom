@@ -136,6 +136,45 @@ describe('component analyze', function () {
           });
       });
     });
+    describe('component installed', function () {
+      it('should return the dependencies tree', function (done) {
+        var parsed = fecom.parse('comp_valid_version@1.1.2');
+        var expectedFilledTree = {
+          props: {
+            name: 'fecom-demo',
+            owner: 'icefox0801',
+            version: '1.0.0'
+          },
+          subNodes: [
+            {
+              props: {
+                name: 'comp_valid_version',
+                owner: 'icefox0801',
+                version: '1.1.2',
+                installed: true,
+                status: fecom.i18n('INSTALLED_STATUS'),
+                specified: true
+              },
+              subNodes: []
+            }
+          ]
+        };
+        Promise
+          .props({
+            installed: getInstalled(),
+            toInstall: getToInstall([parsed])
+          })
+          .then(function (results) {
+            var installed = results.installed;
+            var toInstall = results.toInstall;
+            return analyze(toInstall, installed, 'latest');
+          })
+          .then(function (treeModel) {
+            expect(treeModel.model).toEqual(expectedFilledTree);
+            done();
+          });
+      });
+    });
     describe('component dependencies has conflict versions', function () {
       it('should return the dependencies tree', function (done) {
         var parsed = fecom.parse('comp_deps_new@1.0.0');
@@ -158,7 +197,8 @@ describe('component analyze', function () {
                   props: {
                     name: 'comp_sub_d',
                     owner: 'icefox0801',
-                    version: '1.0.1'
+                    version: '1.0.1',
+                    resolved: true
                   },
                   subNodes: []
                 },
