@@ -175,6 +175,101 @@ describe('component analyze', function () {
           });
       });
     });
+    describe('component dependencies installed as specified', function () {
+      it('should return the dependencies tree', function (done) {
+        var parsed = fecom.parse('comp_sub_f@1.0.0');
+        var expectedFilledTree = {
+          props: {
+            name: 'fecom-demo',
+            owner: 'icefox0801',
+            version: '1.0.0'
+          },
+          subNodes: [
+            {
+              props: {
+                name: 'comp_sub_f',
+                owner: 'icefox0801',
+                version: '1.0.0',
+                specified: true
+              },
+              subNodes: [
+                {
+                  props: {
+                    name: 'comp_valid_version',
+                    owner: 'icefox0801',
+                    version: '1.1.2',
+                    installed: true,
+                    status: fecom.i18n('INSTALLED_STATUS')
+                  },
+                  subNodes: []
+                }
+              ]
+            }
+          ]
+        };
+        Promise
+          .props({
+            installed: getInstalled(),
+            toInstall: getToInstall([parsed])
+          })
+          .then(function (results) {
+            var installed = results.installed;
+            var toInstall = results.toInstall;
+            return analyze(toInstall, installed, 'latest');
+          })
+          .then(function (treeModel) {
+            expect(treeModel.model).toEqual(expectedFilledTree);
+            done();
+          });
+      });
+    });
+    describe('component dependencies installed as dependencies', function () {
+      it('should return the dependencies tree', function (done) {
+        var parsed = fecom.parse('comp_sub_e@1.0.0');
+        var expectedFilledTree = {
+          props: {
+            name: 'fecom-demo',
+            owner: 'icefox0801',
+            version: '1.0.0'
+          },
+          subNodes: [
+            {
+              props: {
+                name: 'comp_sub_e',
+                owner: 'icefox0801',
+                version: '1.0.0',
+                specified: true
+              },
+              subNodes: [
+                {
+                  props: {
+                    name: 'comp_sub_a',
+                    owner: 'icefox0801',
+                    version: '1.1.1',
+                    resolved: true
+                  },
+                  subNodes: []
+                }
+              ]
+            }
+          ]
+        };
+        Promise
+          .props({
+            installed: getInstalled(),
+            toInstall: getToInstall([parsed])
+          })
+          .then(function (results) {
+            var installed = results.installed;
+            var toInstall = results.toInstall;
+            return analyze(toInstall, installed, 'latest');
+          })
+          .then(function (treeModel) {
+            expect(treeModel.model).toEqual(expectedFilledTree);
+            done();
+          });
+      });
+    });
     describe('component dependencies has conflict versions', function () {
       it('should return the dependencies tree', function (done) {
         var parsed = fecom.parse('comp_deps_new@1.0.0');
