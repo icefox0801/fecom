@@ -172,4 +172,32 @@ describe('component constructor', function () {
       });
     });
   });
+
+  describe('getInformation', function () {
+    describe('a component', function () {
+      it('should return valid component information', function (done) {
+        var expectedInfo = {
+          name: 'comp_valid_version',
+          owner: 'icefox0801',
+          version: '1.1.2',
+          description: 'A magic component',
+          author: 'icefox0801<icefox0801@hotmail>'
+        };
+        var expectedVersions = ['1.1.2', '1.1.1', '1.0.1', '1.0.0'];
+        var component = new Component({
+          name: 'comp_valid_version',
+          owner: 'icefox0801',
+          version: '1.1.2'
+        }, 'remote');
+        component.getInformation()
+          .then(function (result) {
+            expect(result.info).toEqual(expectedInfo);
+            expect(result.versions.map(function (version) {
+              return version.name;
+            })).toEqual(expectedVersions);
+            done();
+          });
+      });
+    });
+  });
 });

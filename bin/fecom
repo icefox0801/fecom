@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var Liftoff = require('Liftoff');
+var Liftoff = require('liftoff');
 var cli = require('../lib/cli');
 
 var fecom = new Liftoff({

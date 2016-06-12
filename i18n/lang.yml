@@ -205,3 +205,11 @@ NO_COMPONENT_TO_UNINSTALL:
 UNINSTALLED_COMPONENTS:
   en_US: "Uninstalled component(s)\n{0}"
   zh_CN: "卸载的组件\n{0}"
+
+SHOW_COMPONENT_INFORMATION:
+  en_US: Show component infomation
+  zh_CN: 显示组件的详细信息
+
+COMPONENT_INFORMATION:
+  en_US: "Component information\n{0}"
+  zh_CN: "组件详细信息\n{0}"
