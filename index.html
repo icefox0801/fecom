@@ -25,7 +25,8 @@
 <p>A magic component management tool</p>
 
 <p><a href="https://travis-ci.org/icefox0801/fecom"><img src="https://travis-ci.org/icefox0801/fecom.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/icefox0801/fecom?branch=master"><img src="https://coveralls.io/repos/github/icefox0801/fecom/badge.svg?branch=master" alt="Coverage Status"></a></p>
+<a href="https://coveralls.io/github/icefox0801/fecom?branch=master"><img src="https://coveralls.io/repos/github/icefox0801/fecom/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://david-dm.org/icefox0801/fecom"><img src="https://david-dm.org/icefox0801/fecom.svg" alt="Dependency Status"></a></p>
 
 <hr>
 
@@ -77,6 +78,7 @@
 install|i [options] [component...]     安装组件
 uninstall|un [options] &lt;component...&gt;  卸载组件
 list|ls [options] [component...]       列出组件版本
+info &lt;component&gt;                       显示组件的详细信息
 profile|p [options] [query]            管理用户配置
 tree|t [options] [component...]        打印组件依赖树
 version|v [options] [releaseType]      组件版本更新
@@ -87,8 +89,7 @@ update|u [component...]                更新组件
 
 <p>Options:</p>
 
-<pre><code>-h, --help     output usage information
--V, --version  output the version number
+<pre><code>-h, --help  output usage information
 </code></pre>
 
 <h2>
@@ -159,6 +160,8 @@ update|u [component...]                更新组件
 <li>
 <code>fecom update compA</code>: 更新<code>compA</code>到最新版本，只更新<code>compA</code>本身</li>
 <li>
+<code>fecom info compA</code>: 显示<code>compA</code>的详细信息以及版本更新历史</li>
+<li>
 <code>fecom list</code>: 列出本地安装的所有组件，如果指定<code>-U</code>参数则检查是否有更新</li>
 <li>
 <code>fecom list compA</code>: 列出本地安装的<code>compA</code>组件，如果指定<code>-U</code>参数则检查是否有更新</li>
@@ -167,7 +170,7 @@ update|u [component...]                更新组件
 <li>
 <code>fecom profile "username=icefox0801"</code>: 以<code>query</code>形式设置用户配置项</li>
 <li>
-<code>fecom profile -d "domain=https://gitlab.example.com"</code>: 以<code>query</code>形式设置<code>fecom</code>默认配置项</li>
+<code>fecom profile -D "domain=https://gitlab.example.com"</code>: 以<code>query</code>形式设置<code>fecom</code>默认配置项</li>
 <li>
 <code>fecom tree</code>: 以依赖树的形式列出本地安装的所有组件</li>
 <li>
