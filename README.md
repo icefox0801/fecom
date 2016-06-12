@@ -47,6 +47,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
     install|i [options] [component...]     安装组件
     uninstall|un [options] <component...>  卸载组件
     list|ls [options] [component...]       列出组件版本
+    info <component>                       显示组件的详细信息
     profile|p [options] [query]            管理用户配置
     tree|t [options] [component...]        打印组件依赖树
     version|v [options] [releaseType]      组件版本更新
@@ -56,8 +57,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 
   Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
+    -h, --help  output usage information
 
 ## component.json
 `component.json`配置文件可能存在于项目或者组件中，在不同的应用场景，并非所有的配置项都有用，请酌情进行配置！
@@ -88,11 +88,12 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 + `fecom install compA`: 安装`compA`组件以及它的依赖，并保存到`component.json`中
 + `fecom uninstall compA`: 卸载`compA`组件以及它的依赖
 + `fecom update compA`: 更新`compA`到最新版本，只更新`compA`本身
++ `fecom info compA`: 显示`compA`的详细信息以及版本更新历史
 + `fecom list`: 列出本地安装的所有组件，如果指定`-U`参数则检查是否有更新
 + `fecom list compA`: 列出本地安装的`compA`组件，如果指定`-U`参数则检查是否有更新
 + `fecom profile`: 列出用户配置
 + `fecom profile "username=icefox0801"`: 以`query`形式设置用户配置项
-+ `fecom profile -d "domain=https://gitlab.example.com"`: 以`query`形式设置`fecom`默认配置项
++ `fecom profile -D "domain=https://gitlab.example.com"`: 以`query`形式设置`fecom`默认配置项
 + `fecom tree`: 以依赖树的形式列出本地安装的所有组件
 + `fecom tree compA`: 以依赖树的形式列出本地安装的`compA`组件，如果指定`-R`参数，则列出远程`compA`组件的依赖树
 + `fecom version`: 提示选择并更新组件的版本号，会更新`component.json`中的`version`和自动添加`tag`，注意还需执行`git push --follow-tags`来推送到远程仓库
