@@ -207,9 +207,25 @@ UNINSTALLED_COMPONENTS:
   zh_CN: "卸载的组件\n{0}"
 
 SHOW_COMPONENT_INFORMATION:
-  en_US: Show component infomation
+  en_US: show component information
   zh_CN: 显示组件的详细信息
 
 COMPONENT_INFORMATION:
   en_US: "Component information\n{0}"
   zh_CN: "组件详细信息\n{0}"
+
+SEARCH_COMPONENTS:
+  en_US: search components
+  zh_CN: 搜索组件
+
+SEARCHING_COMPONENTS:
+  en_US: Searching components via Gitlab
+  zh_CN: 正在通过Gitlab搜索组件
+
+NO_MATCHED_RESULTS:
+  en_US: No matched results
+  zh_CN: 未找到匹配的结果
+
+SEARCH_RESULTS:
+  en_US: "Search results\n{0}"
+  zh_CN: "搜索结果\n{0}"
