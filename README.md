@@ -48,6 +48,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
     uninstall|un [options] <component...>  卸载组件
     list|ls [options] [component...]       列出组件版本
     info <component>                       显示组件的详细信息
+    search|s [options] <pattern>           搜索组件
     profile|p [options] [query]            管理用户配置
     tree|t [options] [component...]        打印组件依赖树
     version|v [options] [releaseType]      组件版本更新
@@ -91,6 +92,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 + `fecom info compA`: 显示`compA`的详细信息以及版本更新历史
 + `fecom list`: 列出本地安装的所有组件，如果指定`-U`参数则检查是否有更新
 + `fecom list compA`: 列出本地安装的`compA`组件，如果指定`-U`参数则检查是否有更新
++ `fecom search compA`: 按照`compA`搜索`Gitlab`中的组件，如果指定`-O`参数则按用户/组搜索
 + `fecom profile`: 列出用户配置
 + `fecom profile "username=icefox0801"`: 以`query`形式设置用户配置项
 + `fecom profile -D "domain=https://gitlab.example.com"`: 以`query`形式设置`fecom`默认配置项
