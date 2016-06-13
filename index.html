@@ -79,6 +79,7 @@ install|i [options] [component...]     安装组件
 uninstall|un [options] &lt;component...&gt;  卸载组件
 list|ls [options] [component...]       列出组件版本
 info &lt;component&gt;                       显示组件的详细信息
+search|s [options] &lt;pattern&gt;           搜索组件
 profile|p [options] [query]            管理用户配置
 tree|t [options] [component...]        打印组件依赖树
 version|v [options] [releaseType]      组件版本更新
@@ -165,6 +166,8 @@ update|u [component...]                更新组件
 <code>fecom list</code>: 列出本地安装的所有组件，如果指定<code>-U</code>参数则检查是否有更新</li>
 <li>
 <code>fecom list compA</code>: 列出本地安装的<code>compA</code>组件，如果指定<code>-U</code>参数则检查是否有更新</li>
+<li>
+<code>fecom search compA</code>: 按照<code>compA</code>搜索<code>Gitlab</code>中的组件，如果指定<code>-O</code>参数则按用户/组搜索</li>
 <li>
 <code>fecom profile</code>: 列出用户配置</li>
 <li>
