@@ -229,3 +229,7 @@ NO_MATCHED_RESULTS:
 SEARCH_RESULTS:
   en_US: "Search results\n{0}"
   zh_CN: "搜索结果\n{0}"
+
+ERROR_INVALID_COMPONENT:
+  en_US: "Invalid component: {0}"
+  zh_CN: "无效的组件: {0}"
