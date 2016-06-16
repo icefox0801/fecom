@@ -80,7 +80,7 @@ describe('remote gitlab', function () {
   });
 
   describe('searchComponents', function () {
-    describe('by component name', function () {
+    describe('with a pattern', function () {
       it('should return valid searching results', function (done) {
         var expectedResults = [{
           name: 'comp_sub_a',
@@ -89,6 +89,21 @@ describe('remote gitlab', function () {
           version: '1.1.1'
         }];
         gitlabRepo.searchComponents('comp_sub_a')
+          .then(function (results) {
+            expect(results).toEqual(expectedResults);
+            done();
+          });
+      });
+    });
+    describe('by component name', function () {
+      it('should return valid searching results', function (done) {
+        var expectedResults = [{
+          name: 'comp_sub_a',
+          owner: 'icefox0801',
+          description: 'A magic component',
+          version: '1.1.1'
+        }];
+        gitlabRepo.searchComponents('comp_sub_a', { byName: true })
           .then(function (results) {
             expect(results).toEqual(expectedResults);
             done();
