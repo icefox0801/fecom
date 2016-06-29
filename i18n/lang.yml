@@ -233,3 +233,31 @@ SEARCH_RESULTS:
 ERROR_INVALID_COMPONENT:
   en_US: "Invalid component: {0}"
   zh_CN: "无效的组件: {0}"
+
+LINK_COMPONENT:
+  en_US: link component
+  zh_CN: 链接组件
+
+ERROR_NO_LINK_FOUND:
+  en_US: No link found for {0}
+  zh_CN: 未找到{0}的链接
+
+ERROR_NOT_VALID_COMPONENT_DIRECTORY:
+  en_US: Not a valid component directory
+  zh_CN: 不是有效的组件目录
+
+LINK_REGISTERED:
+  en_US: "Link registered: {0} -> {1}"
+  zh_CN: "注册链接: {0} -> {1}"
+
+ERROR_LINK_TARGET_NOT_EXIST:
+  en_US: Link target does not exist
+  zh_CN: 链接目标不存在
+
+LINKED_COMPONENT:
+  en_US: "Linked component: {0}"
+  zh_CN: "链接的组件: {0}"
+
+LINK_PATH_EXISTS:
+  en_US: Link path already exists
+  zh_CN: 链接路径已经存在
