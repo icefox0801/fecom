@@ -25,6 +25,7 @@
 <p>A magic component management tool</p>
 
 <p><a href="https://travis-ci.org/icefox0801/fecom"><img src="https://travis-ci.org/icefox0801/fecom.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/icefox0801/fecom"><img src="https://ci.appveyor.com/api/projects/status/3relf1c4ns7xs6s8?svg=true" alt="Build status"></a>
 <a href="https://coveralls.io/github/icefox0801/fecom?branch=master"><img src="https://coveralls.io/repos/github/icefox0801/fecom/badge.svg?branch=master" alt="Coverage Status"></a>
 <a href="https://david-dm.org/icefox0801/fecom"><img src="https://david-dm.org/icefox0801/fecom.svg" alt="Dependency Status"></a></p>
 
@@ -79,6 +80,7 @@ install|i [options] [component...]     安装组件
 uninstall|un [options] &lt;component...&gt;  卸载组件
 list|ls [options] [component...]       列出组件版本
 info &lt;component&gt;                       显示组件的详细信息
+link [component]                       链接组件
 search|s [options] &lt;pattern&gt;           搜索组件
 profile|p [options] [query]            管理用户配置
 tree|t [options] [component...]        打印组件依赖树
@@ -156,6 +158,10 @@ update|u [component...]                更新组件
 <code>fecom install</code>: 安装<code>component.json</code>中<code>dependencies</code>项所指定的所有组件</li>
 <li>
 <code>fecom install compA</code>: 安装<code>compA</code>组件以及它的依赖，并保存到<code>component.json</code>中</li>
+<li>
+<code>fecom link</code>: 将当前目前的组件注册为全局的链接，以便进行本地开发</li>
+<li>
+<code>fecom link compA</code>: 软链接<code>components/compA</code>到全局注册的<code>compA</code>组件目录</li>
 <li>
 <code>fecom uninstall compA</code>: 卸载<code>compA</code>组件以及它的依赖</li>
 <li>
