@@ -49,6 +49,7 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
     uninstall|un [options] <component...>  卸载组件
     list|ls [options] [component...]       列出组件版本
     info <component>                       显示组件的详细信息
+    link [component]                       链接组件
     search|s [options] <pattern>           搜索组件
     profile|p [options] [query]            管理用户配置
     tree|t [options] [component...]        打印组件依赖树
@@ -88,6 +89,8 @@ icefox@icefoxmac:~ $ fecom p -d "domain=https://gitlab.example.com&owner=fe-grou
 + `fecom init`: 初始化组件的目录结构，如果指定`-S`参数则跳过所有问题直接通过默认配置生成组件目录结构
 + `fecom install`: 安装`component.json`中`dependencies`项所指定的所有组件
 + `fecom install compA`: 安装`compA`组件以及它的依赖，并保存到`component.json`中
++ `fecom link`: 将当前目前的组件注册为全局的链接，以便进行本地开发
++ `fecom link compA`: 软链接`components/compA`到全局注册的`compA`组件目录
 + `fecom uninstall compA`: 卸载`compA`组件以及它的依赖
 + `fecom update compA`: 更新`compA`到最新版本，只更新`compA`本身
 + `fecom info compA`: 显示`compA`的详细信息以及版本更新历史
